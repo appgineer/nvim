@@ -24,7 +24,7 @@ opt.cursorline = true
 -- etc
 opt.encoding = "utf-8"
 opt.fileencoding = "utf-8"
-opt.cmdheight = 1
+opt.cmdheight = 0
 opt.mouse:append("a")
 
 
