@@ -18,7 +18,7 @@ opt.wrapscan = false  -- 검색이 파일 끝/처음에 도달해도 순환하�
 opt.number = true
 opt.relativenumber = true -- 상대적 라인번호
 opt.termguicolors = true
-opt.signcolumn = "yes"    -- 브레이크 포인트 기둥 활성화 옵션
+opt.signcolumn = "no"     -- 브레이크 포인트 기둥 활성화 옵션
 opt.cursorline = true
 
 -- etc
