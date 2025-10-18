@@ -40,13 +40,34 @@ return {
         },
       })
 
-      lspconfig.lua_ls.setup({})
-      lspconfig.eslint.setup({
-        workingDirectories = { mode = "auto" }
+      vim.lsp.config('lua_ls', {
+        cmd = { 'lua-language-server' },
       })
-      lspconfig.tailwindcss.setup({
-        root_dir = lspconfig.util.root_pattern("tailwind.config.js", "tailwind.config.cjs", "postcss.config.js",
-          "package.json", ".git"),
+
+      vim.lsp.config('ts_ls', {
+        cmd = { 'typescript-language-server', '--stdio' },
+      })
+
+      vim.lsp.config('html', {
+        cmd = { 'vscode-html-language-server', '--stdio' },
+      })
+
+      vim.lsp.config('eslint', {
+        cmd = { 'vscode-eslint-language-server', '--stdio' },
+        settings = {
+          workingDirectories = { mode = "auto" }
+        }
+      })
+
+      vim.lsp.config('tailwindcss', {
+        cmd = { 'tailwindcss-language-server', '--stdio' },
+        root_markers = {
+          "tailwind.config.js",
+          "tailwind.config.cjs",
+          "postcss.config.js",
+          "package.json",
+          ".git"
+        },
       })
 
       keyMapper("K", vim.lsp.buf.hover)
