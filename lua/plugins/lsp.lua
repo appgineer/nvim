@@ -10,7 +10,7 @@ return {
     "williamboman/mason-lspconfig.nvim",
     config = function()
       require("mason-lspconfig").setup({
-        ensure_installed = { "lua_ls", "ts_ls", "html", "eslint", "tailwindcss" },
+        ensure_installed = { "lua_ls", "ts_ls", "html", "biome", "tailwindcss" },
       })
     end,
   },
@@ -52,11 +52,8 @@ return {
         cmd = { 'vscode-html-language-server', '--stdio' },
       })
 
-      vim.lsp.config('eslint', {
-        cmd = { 'vscode-eslint-language-server', '--stdio' },
-        settings = {
-          workingDirectories = { mode = "auto" }
-        }
+      vim.lsp.config('biome', {
+        cmd = { 'biome', 'lsp-proxy' },
       })
 
       vim.lsp.config('tailwindcss', {
