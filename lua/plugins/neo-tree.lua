@@ -30,6 +30,9 @@ return {
           hide_dotfiles = false, --.git, .env 로 시작하는 파일 숨김 여부
           hide_by_name = {
             ".DS_Store"
+          },
+          never_show = {
+            ".DS_Store"
           }
         },
       },
