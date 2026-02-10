@@ -28,6 +28,9 @@ return {
         filtered_items = {
           visible = true,        --숨겨진 항목 표시
           hide_dotfiles = false, --.git, .env 로 시작하는 파일 숨김 여부
+          hide_by_name = {
+            ".DS_Store"
+          }
         },
       },
 
